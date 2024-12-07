@@ -1,0 +1,31 @@
+.warpper{
+    text-align: center;
+    border: 2px solid;
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bmi-button{ 
+    cursor: pointer;
+    background-color: rgb(48, 165, 48);
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius:5px;
+    padding: 10px;
+}
+.bmi-button:hover{
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+.bmi-result{
+    border: 2px solid;
+    background-color: rgb(229, 226, 226);
+    padding: 15px;
+    border-radius: 10px;
+}
+.the-bmi{
+    font-weight: bold;
+    color: #1976D2;
+}
