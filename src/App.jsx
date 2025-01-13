@@ -76,7 +76,7 @@ function App() {
       <p className='bmi-result'>Your BMI is <span className='the-bmi'>{bmi}</span></p>
       </div>
       
-      <LineChart width={500} height={300} data={chartArray}>
+      <LineChart width={350} height={300} data={chartArray}>
         <CartesianGrid stroke="#ccc" />
         <XAxis dataKey="date" />
         <YAxis />
