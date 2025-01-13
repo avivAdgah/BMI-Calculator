@@ -3,6 +3,7 @@
     border: 2px solid;
     font-family: 'Roboto Slab', serif;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -29,3 +30,9 @@
     font-weight: bold;
     color: #1976D2;
 }
+
+@media only screen and (max-width: 600px) {
+    .chart-section{
+        margin: auto;
+    }
+  }
