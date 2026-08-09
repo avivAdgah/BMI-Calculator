@@ -1,0 +1,218 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(16px, 3vw, 32px);
+  padding: clamp(16px, 4vw, 48px) clamp(12px, 4vw, 24px);
+}
+
+.bmi-card,
+.chart-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.05);
+  padding: clamp(20px, 4vw, 32px);
+  width: 100%;
+  max-width: 420px;
+}
+
+.title {
+  margin: 0 0 24px;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+/* Measurement input */
+.measurement-input {
+  margin-bottom: 24px;
+}
+
+.measurement-input__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.measurement-input__header label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.measurement-input__unit {
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.measurement-input__number {
+  width: 84px;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  text-align: center;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.measurement-input__number:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.measurement-input__number--error {
+  border-color: var(--danger);
+  outline-color: var(--danger);
+}
+
+.measurement-input__error {
+  margin: 6px 2px 0;
+  font-size: 0.8rem;
+  color: var(--danger);
+}
+
+/* Button */
+.bmi-button {
+  width: 100%;
+  cursor: pointer;
+  background-color: var(--accent);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.bmi-button:hover:not(:disabled) {
+  background-color: #1565c0;
+}
+
+.bmi-button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.bmi-button:disabled {
+  background-color: var(--border);
+  color: var(--muted);
+  cursor: not-allowed;
+}
+
+/* Result */
+.bmi-result {
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--bg);
+  text-align: center;
+}
+
+.bmi-result--empty p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.bmi-result__label {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.bmi-result__value {
+  margin: 4px 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--category-color, var(--accent));
+}
+
+.bmi-result__pill {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  background: var(--category-color, var(--accent));
+}
+
+/* Chart */
+.bmi-chart__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.bmi-chart__header h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.bmi-chart__clear {
+  cursor: pointer;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.bmi-chart__clear:hover {
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.bmi-chart__empty {
+  margin: 40px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.bmi-chart__tooltip {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bmi-chart__tooltip p {
+  margin: 2px 0;
+  font-size: 0.8rem;
+}
+
+.bmi-chart__tooltip-date {
+  color: var(--muted);
+}
+
+.bmi-chart__tooltip-bmi {
+  font-weight: 600;
+}
+
+.bmi-chart__tooltip-category {
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    align-items: stretch;
+  }
+
+  .bmi-card,
+  .chart-card {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
