@@ -10,21 +10,21 @@ const WEIGHT_MARKS = [10, 50, 100, 150, 200].map((value) => ({ value, label: Str
 const HEIGHT_MARKS = [50, 100, 150, 200, 250].map((value) => ({ value, label: String(value) }));
 
 function validateWeight(value) {
-  if (value === '') return 'נא להזין משקל';
+  if (value === '') return 'Please enter weight';
   const num = Number(value);
-  if (Number.isNaN(num)) return 'משקל חייב להיות מספר';
+  if (Number.isNaN(num)) return 'Weight must be a number';
   if (num < WEIGHT_LIMITS.min || num > WEIGHT_LIMITS.max) {
-    return `משקל חייב להיות בין ${WEIGHT_LIMITS.min} ל-${WEIGHT_LIMITS.max} ק"ג`;
+    return `Weight must be between ${WEIGHT_LIMITS.min} and ${WEIGHT_LIMITS.max} kg`;
   }
   return null;
 }
 
 function validateHeight(value) {
-  if (value === '') return 'נא להזין גובה';
+  if (value === '') return 'Please enter height';
   const num = Number(value);
-  if (Number.isNaN(num)) return 'גובה חייב להיות מספר';
+  if (Number.isNaN(num)) return 'Height must be a number';
   if (num < HEIGHT_LIMITS.min || num > HEIGHT_LIMITS.max) {
-    return `גובה חייב להיות בין ${HEIGHT_LIMITS.min} ל-${HEIGHT_LIMITS.max} ס"מ`;
+    return `Height must be between ${HEIGHT_LIMITS.min} and ${HEIGHT_LIMITS.max} cm`;
   }
   return null;
 }
@@ -49,11 +49,11 @@ function App() {
   return (
     <div className="wrapper">
       <div className="bmi-card">
-        <h1 className="title">מחשבון BMI</h1>
+        <h1 className="title">BMI Calculator</h1>
 
         <MeasurementInput
-          label="משקל"
-          unit={'ק"ג'}
+          label="Weight"
+          unit={'kg'}
           value={weight}
           onChange={setWeight}
           min={WEIGHT_LIMITS.min}
@@ -63,8 +63,8 @@ function App() {
         />
 
         <MeasurementInput
-          label="גובה"
-          unit={'ס"מ'}
+          label="Height"
+          unit={'cm'}
           value={height}
           onChange={setHeight}
           min={HEIGHT_LIMITS.min}
@@ -74,7 +74,7 @@ function App() {
         />
 
         <button className="bmi-button" onClick={calculate} disabled={!isValid}>
-          חשב BMI
+          Calculate BMI
         </button>
 
         <BmiResult bmi={bmi} />

@@ -37,16 +37,16 @@ function BmiChart({ history, onClear }) {
   return (
     <div className="bmi-chart">
       <div className="bmi-chart__header">
-        <h2>מעקב היסטוריה</h2>
+        <h2>History Tracking</h2>
         {history.length > 0 && (
           <button type="button" className="bmi-chart__clear" onClick={onClear}>
-            נקה היסטוריה
+            Clear History
           </button>
         )}
       </div>
 
       {history.length === 0 ? (
-        <p className="bmi-chart__empty">עדיין אין נתונים — חשבו את ה-BMI שלכם כדי להתחיל לעקוב</p>
+        <p className="bmi-chart__empty">No data yet — calculate your BMI to start tracking</p>
       ) : (
         <ResponsiveContainer width="100%" height={280}>
           <LineChart data={history} margin={{ top: 10, right: 16, bottom: 0, left: -16 }}>

@@ -1,6 +1,6 @@
 <h1 align="center">BMI Calculator</h1>
 
-<p align="center">מחשבון BMI (מדד מסת גוף) בעברית, בנוי ב-React ו-Vite</p>
+<p align="center">A BMI (Body Mass Index) calculator built with React and Vite</p>
 
 <!-- TABLE OF CONTENTS -->
 
@@ -16,14 +16,14 @@
 
 ## Overview
 
-אפליקציית React שמחשבת מדד מסת גוף (BMI) לפי משקל וגובה, מציגה את הקטגוריה המתאימה (תת משקל / משקל תקין / עודף משקל / השמנה), ושומרת היסטוריית מדידות בגרף לאורך זמן.
+A React app that calculates Body Mass Index (BMI) from weight and height, displays the matching category (underweight / normal weight / overweight / obese), and keeps a history of measurements in a chart over time.
 
 ### Features
 
-- חישוב BMI לפי משקל (ק"ג) וגובה (ס"מ), כולל ולידציה לטווחי ערכים תקינים
-- סיווג התוצאה לקטגוריה (תת משקל, משקל תקין, עודף משקל, השמנה) עם צבע מתאים
-- שמירת היסטוריית מדידות (localStorage) והצגתן כגרף
-- אפשרות לניקוי ההיסטוריה
+- Calculate BMI from weight (kg) and height (cm), with validation for valid value ranges
+- Classify the result into a category (underweight, normal weight, overweight, obese) with a matching color
+- Save measurement history (localStorage) and display it as a chart
+- Option to clear the history
 
 ### Built With
 

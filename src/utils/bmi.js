@@ -2,10 +2,10 @@ export const WEIGHT_LIMITS = { min: 1, max: 200 };
 export const HEIGHT_LIMITS = { min: 50, max: 250 };
 
 export const BMI_CATEGORIES = [
-  { key: 'underweight', label: 'תת משקל', color: '#3b82f6', max: 18.5 },
-  { key: 'normal', label: 'משקל תקין', color: '#22c55e', max: 25 },
-  { key: 'overweight', label: 'עודף משקל', color: '#f59e0b', max: 30 },
-  { key: 'obese', label: 'השמנה', color: '#ef4444', max: Infinity },
+  { key: 'underweight', label: 'Underweight', color: '#3b82f6', max: 18.5 },
+  { key: 'normal', label: 'Normal weight', color: '#22c55e', max: 25 },
+  { key: 'overweight', label: 'Overweight', color: '#f59e0b', max: 30 },
+  { key: 'obese', label: 'Obese', color: '#ef4444', max: Infinity },
 ];
 
 export function calculateBmi(weightKg, heightCm) {
